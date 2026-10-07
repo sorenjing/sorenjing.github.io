@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<rect width="640" height="360" fill="#edf3f8"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif"><text x="38" y="42" fill="#596d82" font-size="13" letter-spacing="2">AI CONTEXT KIT</text><text x="602" y="42" text-anchor="end" fill="#6e8398" font-size="12">共享上下文</text>
+<g fill="none" stroke="#b5c8d9" stroke-width="1.5"><path d="M320 161V103H135V123M320 103H505V123M320 216V265H135V245M320 265H505V245"/></g>
+<g fill="#fff" stroke="#cddae5"><rect x="78" y="122" width="114" height="44" rx="7"/><rect x="448" y="122" width="114" height="44" rx="7"/><rect x="78" y="212" width="114" height="44" rx="7"/><rect x="448" y="212" width="114" height="44" rx="7"/></g>
+<g font-size="16" fill="#42566c" text-anchor="middle"><text x="135" y="150">Codex</text><text x="505" y="150">Claude</text><text x="135" y="240">Gemini</text><text x="505" y="240">Cursor</text></g>
+<rect x="247" y="129" width="146" height="126" rx="13" fill="#244b70"/>
+<text x="320" y="187" fill="#fff" text-anchor="middle" font-size="37" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" letter-spacing="-2">.ai/</text><text x="320" y="226" text-anchor="middle" fill="#b8d2ea" font-size="13">可审查的项目上下文</text>
+<text x="320" y="311" text-anchor="middle" fill="#596d82" font-size="13">有限观察 · 人工记忆 · 新鲜度检测</text></g></svg>

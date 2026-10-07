@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<rect width="640" height="360" fill="#e9edf0"/>
+<path d="M38 72H602M38 288H602M464 72V288" fill="none" stroke="#bac4cd"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif"><text x="38" y="42" fill="#607283" font-size="13" letter-spacing="2">OTLET</text><text x="602" y="42" text-anchor="end" fill="#6c7e8e" font-size="12">知识站点</text>
+<text x="58" y="221" fill="#293f51" font-size="108" letter-spacing="-6" font-family="Georgia,Times New Roman,serif">Otlet</text>
+<text x="38" y="318" fill="#607283" font-size="13">筹备中</text></g>
+<g stroke="#96a9b8" fill="none"><path d="M491 113h84m-84 20h57m-57 40h84m-84 20h57m-57 40h84m-84 20h57"/></g></svg>

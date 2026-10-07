@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "evolvetrace",
+    "name": "EvolveTrace",
+    "short": "记录 AI 编程任务的上下文、执行过程与验证证据。",
+    "intro": "最终 diff 只能看到改了什么。EvolveTrace 让任务约束、所用上下文、工具调用、验证结果与人工复核能够放在同一条执行记录里查看。",
+    "problem": "面对一次 Agent 生成的代码，我们还需要知道它是否遵循任务边界、读取了什么上下文、实际运行了哪些验证，以及失败以后怎样复查。",
+    "steps": [
+      [
+        "任务与上下文",
+        "将 Task Contract、Context Snapshot 和 Context Receipt 绑定到 Run。"
+      ],
+      [
+        "可观察执行",
+        "采集 Codex lifecycle Hooks，记录工具调用、变更、权限与验证事件。"
+      ],
+      [
+        "证据评估",
+        "用确定性规则评估验收标准、上下文新鲜度、仓库范围和验证证据。"
+      ]
+    ],
+    "boundary": "目前提供本地执行审查、实时观察和首个基于证据的评估切片。更完整的 Regression Harness 和可选 LLM Judge 仍属于后续工作。",
+    "repo": "https://github.com/sorenjing/EvolveTrace",
+    "category": "Agent 执行审查",
+    "status": "公开项目"
+  },
+  {
+    "slug": "ai-context-kit",
+    "name": "AI Context Kit",
+    "short": "在多个 AI 编程工具之间共享可审查的项目上下文。",
+    "intro": "一个工作区常有多个项目，也会同时使用 Codex、Claude、Gemini 和 Cursor。AI Context Kit 维护范围明确的项目观察与人工可审查的记忆，并检测已观察输入何时发生变化。",
+    "problem": "每个工具重复发现仓库，会浪费时间；决策留在某个会话里，其他工具又看不到。共享入口需要清楚说明观察范围，并允许人继续修改关键记忆。",
+    "steps": [
+      [
+        "发现项目",
+        "从有限的元数据和目录结构建立工作区视图。"
+      ],
+      [
+        "维护上下文",
+        "生成可版本化的 .ai/ 内容，并保护人工维护区块。"
+      ],
+      [
+        "检测变化",
+        "按输入指纹标记新项目和过期内容，支持按需更新。"
+      ]
+    ],
+    "boundary": "默认离线运行，不需要模型 API、云服务或向量数据库。它提供可复用的观察与记忆层，不替代阅读源码和项目规则。",
+    "repo": "https://github.com/sorenjing/ai-context-kit",
+    "category": "共享项目上下文",
+    "status": "公开项目"
+  },
+  {
+    "slug": "smart-email-notifier",
+    "name": "Smart Email Notifier",
+    "short": "通过邮箱规则与语义筛选，找出需要行动的邮件。",
+    "intro": "关键词规则可以粗略找出可能重要的邮件，随后再根据消息语义筛选需要行动的内容。这个项目把两步整理成一个可复用的 Agent Skill。",
+    "problem": "面试通知、日程变更和推广邮件可能混在一起。只靠关键词容易漏掉隐晦但重要的消息，也容易把无关邮件都推成提醒。",
+    "steps": [
+      [
+        "描述目标",
+        "用自然语言说明哪些邮件值得关注。"
+      ],
+      [
+        "广泛召回",
+        "设计邮箱过滤、标签或选择性转发规则。"
+      ],
+      [
+        "语义筛选",
+        "提取明确的时间、链接与下一步行动，按授权能力提供提醒或设置指引。"
+      ]
+    ],
+    "boundary": "这是 Skill 与工作流说明，不是独立邮箱应用或常驻服务。能否连接邮箱、创建提醒取决于所用环境和用户授权；重要消息仍应以原始邮件核对。",
+    "repo": "https://github.com/sorenjing/smart-email-notifier",
+    "category": "邮件处理 Skill",
+    "status": "公开项目"
+  },
+  {
+    "slug": "otlet",
+    "name": "Otlet",
+    "short": "一个正在整理的独立知识站点。",
+    "intro": "Otlet 计划作为独立知识站点发布。",
+    "problem": "",
+    "steps": [],
+    "boundary": "项目正在整理，公开地址尚未确定。",
+    "repo": null,
+    "category": "知识站点",
+    "status": "筹备中"
+  }
+]

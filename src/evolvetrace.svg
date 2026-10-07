@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#ffffff" stroke-opacity=".025"/></pattern></defs>
+<rect width="640" height="360" fill="#191c27"/><rect width="640" height="360" fill="url(#grid)"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif"><text x="38" y="42" fill="#abb2c8" font-size="13" letter-spacing="2">EVOLVETRACE</text><text x="600" y="42" text-anchor="end" fill="#818aa6" font-size="12">执行证据</text>
+<path d="M87 177H551" fill="none" stroke="#444b62" stroke-width="2"/>
+<g fill="#232838" stroke="#3a4158"><rect x="43" y="107" width="122" height="142" rx="10"/><rect x="187" y="107" width="122" height="142" rx="10"/><rect x="331" y="107" width="122" height="142" rx="10"/><rect x="475" y="107" width="122" height="142" rx="10"/></g>
+<g fill="#a4b3fc"><circle cx="104" cy="149" r="15"/><circle cx="248" cy="149" r="15"/><circle cx="392" cy="149" r="15"/><circle cx="536" cy="149" r="15"/></g>
+<g fill="#252b45" font-size="12" text-anchor="middle"><text x="104" y="153">01</text><text x="248" y="153">02</text><text x="392" y="153">03</text><text x="536" y="153">04</text></g>
+<g fill="#f0f1f9" font-size="16" text-anchor="middle"><text x="104" y="195">任务约束</text><text x="248" y="195">上下文</text><text x="392" y="195">执行记录</text><text x="536" y="195">验证证据</text></g>
+<g fill="#919bb7" font-size="11" text-anchor="middle" letter-spacing="1"><text x="104" y="224">CONTRACT</text><text x="248" y="224">CONTEXT</text><text x="392" y="224">TRACE</text><text x="536" y="224">CHECKS</text></g>
+<path d="M104 261V279H536V261" fill="none" stroke="#6874a0" stroke-dasharray="3 4"/>
+<text x="320" y="307" text-anchor="middle" fill="#a4b3fc" font-size="13">同一次 Run，可回溯审查</text></g></svg>
