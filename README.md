@@ -2,7 +2,7 @@
 
 项目展示与独立站点导航。首页展示 EvolveTrace、AI Context Kit、Smart Email Notifier，以及筹备中的 Otlet。每个项目有独立的静态介绍页。
 
-访问地址：<https://sorenjing.github.io>（首次发布需启用 GitHub Pages）。
+访问地址：<https://sorenjing.github.io>。
 
 ## 本地运行
 
@@ -37,6 +37,10 @@ npm run preview
 没有确认的链接保持为空。Otlet 的 `repo` 保持 `null`，公开后再填写。流程图是概念示意，页面能力说明应与各项目实际状态保持一致。
 
 ## GitHub Pages
+
+当前仓库已将发布来源设为 GitHub Actions。日常更新只需向 `main` 提交修改，构建通过后会自动发布。
+
+重新配置站点时：
 
 1. 在仓库 **Settings → Pages → Build and deployment** 中，将 **Source** 设为 **GitHub Actions**。
 2. 打开 **Actions → Build and deploy Pages → Run workflow**，选择 `main`。
