@@ -1,7 +1,16 @@
 {
   "title": "个人主页",
-  "description": "EvolveTrace、AI Context Kit、Smart Email Notifier 与 Otlet 的项目介绍。",
+  "description": "一名开发者的个人主页：Web 开发、AI 应用与开源项目。",
+  "intro": {
+    "heading": "你好。",
+    "text": "我是一名开发者，主要做 Web 开发和 AI 应用。目前的项目涉及 Agent、开发工具与知识管理。"
+  },
   "url": "https://sorenjing.github.io",
   "github": "https://github.com/sorenjing",
-  "links": []
+  "links": [
+    {
+      "label": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/6889be15000000002800ec25"
+    }
+  ]
 }

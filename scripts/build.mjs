@@ -13,6 +13,9 @@ const https = value => {
   return esc(url.href);
 };
 https(site.url); https(site.github);
+for (const key of ['heading', 'text']) {
+  if (typeof site.intro?.[key] !== 'string' || !site.intro[key].trim()) throw new Error(`Missing intro ${key}`);
+}
 const slugs = new Set();
 for (const p of projects) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.slug) || slugs.has(p.slug)) throw new Error(`Invalid or duplicate project slug: ${p.slug}`);
@@ -52,11 +55,16 @@ function layout({ title, description, body, depth = 0, route = '' }) {
 }
 function home() {
   return layout({ title: site.title, description: site.description, body: `
+<section class="profile-intro" aria-labelledby="intro-title">
+<h1 id="intro-title">${esc(site.intro.heading)}</h1>
+<p>${esc(site.intro.text)}</p>
+<nav class="profile-links" aria-label="个人平台"><a class="text-link" href="${https(site.github)}">GitHub</a>${site.links.map(link => `<a class="text-link" href="${https(link.url)}">${esc(link.label)}</a>`).join('')}</nav>
+</section>
 <section id="projects" aria-labelledby="projects-title">
-<div class="intro"><div><span class="eyebrow" aria-hidden="true">PROJECTS</span><h1 id="projects-title">项目</h1></div><span class="index-note">${projects.filter(p => p.repo).length} 个公开项目 · ${projects.filter(p => !p.repo).length} 个筹备中</span></div>
+<div class="intro"><h2 id="projects-title">项目</h2><span class="index-note">${projects.filter(p => p.repo).length} 个公开项目 · ${projects.filter(p => !p.repo).length} 个筹备中</span></div>
 <div class="project-grid">${projects.map(p => `<article class="project">
 <a class="cover-link" href="projects/${p.slug}.html" aria-label="查看 ${esc(p.name)} 项目介绍"><img src="assets/${p.slug}.svg" alt="" width="640" height="360"></a>
-<div class="project-head"><h2><a href="projects/${p.slug}.html">${esc(p.name)}</a></h2>${!p.repo ? `<span class="status">${esc(p.status)}</span>` : ''}</div>
+<div class="project-head"><h3><a href="projects/${p.slug}.html">${esc(p.name)}</a></h3>${!p.repo ? `<span class="status">${esc(p.status)}</span>` : ''}</div>
 <p>${esc(p.short)}</p>
 <div class="project-foot"><span class="category">${esc(p.category)}</span><div class="project-links"><a class="text-link" href="projects/${p.slug}.html">项目介绍</a>${p.repo ? `<a class="text-link" href="${https(p.repo)}" aria-label="${esc(p.name)} 的 GitHub 仓库">GitHub</a>` : ''}</div></div>
 </article>`).join('')}</div>
