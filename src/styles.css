@@ -50,7 +50,7 @@ h1, h2, h3, p { margin: 0; }
 .project h3 a:hover { color: var(--accent); }
 .status { font-size: 12px; font-weight: 400; border: 1px solid var(--line); padding: 5px 9px; border-radius: 6px; color: var(--muted); white-space: nowrap; }
 .project p { color: var(--muted); font-size: 15px; line-height: 1.8; margin-top: 10px; max-width: 33em; }
-.project-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; }
+.project-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; }
 .category { font-size: 12px; color: var(--muted); }
 .project-links { display: flex; align-items: center; gap: 17px; font-size: 13px; white-space: nowrap; }
 .text-link { padding-block: 5px; }
@@ -65,7 +65,8 @@ h1, h2, h3, p { margin: 0; }
 .detail-title h1 { font-size: clamp(32px, 3.7vw, 48px); line-height: 1.16; letter-spacing: -.045em; font-weight: 600; overflow-wrap: anywhere; margin-top: 20px; }
 .detail-title .lead { font-size: 18px; line-height: 1.85; margin-top: 22px; }
 .detail-action { margin-top: 26px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-.button { display: inline-block; background: var(--text); color: var(--bg); border-radius: 8px; padding: 12px 18px; font-size: 14px; }
+.button { display: inline-block; background: var(--text); color: var(--bg); border: 1px solid transparent; border-radius: 8px; padding: 12px 18px; font-size: 14px; }
+.button-secondary { background: transparent; color: var(--text); border-color: var(--line); }
 .button:hover { opacity: .85; }
 .detail-cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 12px; border: 1px solid var(--line); }
 .detail-cover figcaption { color: var(--muted); font-size: 12px; text-align: right; margin-top: 10px; }

@@ -19,7 +19,7 @@ npm run preview
 
 | 文件 | 用途 |
 | --- | --- |
-| `content/projects.json` | 项目名称、简短说明、详细介绍与仓库地址 |
+| `content/projects.json` | 项目名称、简短说明、详细介绍、仓库与公开站点地址 |
 | `content/site.json` | 页面标题、个人介绍、站点地址、GitHub 与自媒体链接 |
 | `src/*.svg` | 项目流程示意和封面 |
 | `src/styles.css` | 页面样式及手机布局 |
@@ -27,6 +27,8 @@ npm run preview
 | `scripts/build.mjs` | 生成首页、项目页和 404 页面 |
 
 新增项目时，添加一项项目数据及同名 SVG 封面，例如 `slug: "my-project"` 对应 `src/my-project.svg`。构建会自动生成 `projects/my-project.html`，并加入首页和项目导航。
+
+已有公开站点的项目填写 `website` 字段（HTTPS 地址），首页卡片与项目介绍页会显示“访问站点”入口。没有公开站点时可省略该字段。
 
 个人介绍在 `content/site.json` 的 `intro` 中修改，不需要填写姓名。自媒体地址可添加到 `links` 中，显示在首页介绍下方及各页页脚：
 

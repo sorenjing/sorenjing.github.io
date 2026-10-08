@@ -21,6 +21,7 @@
     ],
     "boundary": "目前提供本地执行审查、实时观察和首个基于证据的评估切片。更完整的 Regression Harness 和可选 LLM Judge 仍属于后续工作。",
     "repo": "https://github.com/sorenjing/EvolveTrace",
+    "website": "https://sorenjing-evolvetrace.uas857030604.chatgpt.site/",
     "category": "Agent 执行审查",
     "status": "公开项目"
   },
@@ -46,6 +47,7 @@
     ],
     "boundary": "默认离线运行，不需要模型 API、云服务或向量数据库。它提供可复用的观察与记忆层，不替代阅读源码和项目规则。",
     "repo": "https://github.com/sorenjing/ai-context-kit",
+    "website": "https://sorenjing-ai-context-kit.uas857030604.chatgpt.site/",
     "category": "共享项目上下文",
     "status": "公开项目"
   },

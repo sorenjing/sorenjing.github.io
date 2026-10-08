@@ -24,6 +24,7 @@ for (const p of projects) {
     if (typeof p[key] !== 'string' || !p[key]) throw new Error(`Missing ${key} on ${p.slug}`);
   }
   if (p.repo) https(p.repo);
+  if (p.website) https(p.website);
 }
 for (const link of site.links) { https(link.url); if (!link.label) throw new Error('A social link needs a label'); }
 
@@ -66,7 +67,7 @@ function home() {
 <a class="cover-link" href="projects/${p.slug}.html" aria-label="查看 ${esc(p.name)} 项目介绍"><img src="assets/${p.slug}.svg" alt="" width="640" height="360"></a>
 <div class="project-head"><h3><a href="projects/${p.slug}.html">${esc(p.name)}</a></h3>${!p.repo ? `<span class="status">${esc(p.status)}</span>` : ''}</div>
 <p>${esc(p.short)}</p>
-<div class="project-foot"><span class="category">${esc(p.category)}</span><div class="project-links"><a class="text-link" href="projects/${p.slug}.html">项目介绍</a>${p.repo ? `<a class="text-link" href="${https(p.repo)}" aria-label="${esc(p.name)} 的 GitHub 仓库">GitHub</a>` : ''}</div></div>
+<div class="project-foot"><span class="category">${esc(p.category)}</span><div class="project-links"><a class="text-link" href="projects/${p.slug}.html">项目介绍</a>${p.website ? `<a class="text-link" href="${https(p.website)}" aria-label="访问 ${esc(p.name)} 站点">访问站点</a>` : ''}${p.repo ? `<a class="text-link" href="${https(p.repo)}" aria-label="${esc(p.name)} 的 GitHub 仓库">GitHub</a>` : ''}</div></div>
 </article>`).join('')}</div>
 </section>` });
 }
@@ -75,7 +76,7 @@ function detail(p, index) {
   return layout({ title: p.name, description: p.short, depth: 1, route: `projects/${p.slug}.html`, body: `
 <div class="detail-top"><a class="back" href="../index.html#projects"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m12 4-6 6 6 6" stroke="currentColor" stroke-width="1.5"/></svg>所有项目</a></div>
 <section class="detail-hero" aria-labelledby="project-title">
-<div class="detail-title"><span class="eyebrow">${esc(p.category)}</span><h1 id="project-title">${esc(p.name)}</h1><p class="lead">${esc(p.short)}</p><div class="detail-action">${p.repo ? `<a class="button" href="${https(p.repo)}">查看 GitHub 仓库</a>` : `<span class="status">${esc(p.status)}</span>`}</div></div>
+<div class="detail-title"><span class="eyebrow">${esc(p.category)}</span><h1 id="project-title">${esc(p.name)}</h1><p class="lead">${esc(p.short)}</p><div class="detail-action">${p.website ? `<a class="button" href="${https(p.website)}">访问站点</a>` : ''}${p.repo ? `<a class="button${p.website ? ' button-secondary' : ''}" href="${https(p.repo)}">查看 GitHub 仓库</a>` : `<span class="status">${esc(p.status)}</span>`}</div></div>
 <figure class="detail-cover"><img src="../assets/${p.slug}.svg" alt="${esc(p.name)} ${p.repo ? '流程概念示意' : '项目封面'}" width="640" height="360"><figcaption>${p.repo ? '流程概念示意' : '筹备中的项目'}</figcaption></figure>
 </section>
 <div class="detail-body">
